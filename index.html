@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
+    <link href=".\assets\style.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+        rel="stylesheet">
 
     <title>Sunnyside agency landing page</title>
 
@@ -14,44 +19,67 @@
 
 <body>
     <header>
-        <ul class="menu">
-            <li class="menu__1">About</LI>
-            <LI class="menu__1">Services</LI>
-            <LI class="menu__1">Projects</LI>
-            <LI class="menu__contact">Contact</LI>
-        </ul>
-
-        <h1 class="titre1">We are creatives</h1>
+        <div class="banner">
+            <img class="banner__logo" src="assets/img/logo.svg" alt="logo">
+            <ul class="banner__menu">
+                <li class="banner__menu--1">About</LI>
+                <LI class="banner__menu--1">Services</LI>
+                <LI class="banner__menu--1">Projects</LI>
+                <LI class="banner__menu--contact">Contact</LI>
+            </ul>
+        </div>
+        <h1 class="title1">We are creatives</h1>
+        <img class="fleche" src="assets/img/icone/icon-arrow-down.svg" alt="fleche">
     </header>
+
     <main>
-        <div class="explanation">
-            <h2 class="explanation__title">Transform your brand</h2>
+        <div class="container">
+            <section class="container__explanation">
+                <div class="container__explanation--texte">
+                    <h2 class="container__explanation--title">Transform your brand</h2>
 
-            <p>We are a full-service creative agency specializing in helping brands grow fast.
-                Engage your clients through compelling visuals that do most of the marketing for you.</p>
+                    <p>We are a full-service creative agency specializing in helping brands grow fast.
+                        Engage your clients through compelling visuals that do most of the marketing for you.</p>
 
-            <nav class="explanation__nav">Learn more</nav>
+                    <nav class="container__explanation--nav">Learn more</nav>
+                </div>
+            </section>
+            <img class="container__explanation" src="assets/img/photos/image-transform.jpg" alt="egg">
         </div>
-        <div class="explanation">
-            <h2 class="explanation__title">Stand out to the right audience</h2>
+        <div class="container container--2">
+            <section class="container__explanation">
+                <div class="container__explanation--texte container__explanation--texte--2">
+                    <h2 class="container__explanation--title">Stand out to the right audience</h2>
 
-            <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters,
-                we’ll build and extend your brand in digital places.</p>
+                    <p> Using a collaborative formula of designers, researchers, photographers, videographers, and
+                        copywriters,
+                        we’ll build and extend your brand in digital places.</p>
 
-            <nav class="explanation__nav">Learn more</nav>
+                    <nav class="container__explanation--nav">Learn more</nav>
+                </div>
+            </section>
+            <img class="container__explanation" src="assets/img/photos/image-stand-out.jpg" alt="glass">
         </div>
-        <div class="Services">
-            <h3 class="Services__title">Graphic design</h3>
+        <div class="container">
+            <section class="container__Services">
+                <div class="container__Services--texte">
+                    <h3 class="container__Services--title">Graphic design</h3>
 
-            <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures
-                potential clients’ attention.</p>
+                    <p>Great design makes you memorable. We deliver artwork that underscores your brand message and
+                        captures
+                        potential clients’ attention.</p>
+                </div>
+            </section>
+            <section class=" container__Services--2">
+                <div class="container__Services--texte">
+                    <h3 class="container__service--title">Photography</h3>
+                    <p>Increase your credibility by getting the most stunning, high-quality photos that improve your
+                        business
+                        image.</p>
+                </div>
+            </section>
         </div>
-        <div class="Services">
-            <h3 class="service__title">Photography</h3>
-            <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business
-                image.</p>
-        </div>
-        <div class="Client">
+        <section class="Client">
 
             <h4 class="client__title">Client testimonials</h4>
             <div class="client__avis">
@@ -73,7 +101,7 @@
                 <p class="client__avis--signature">Jennie F.</p>
                 <p class="client__avis--function">Business Owner</p>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <ul class="menu">
