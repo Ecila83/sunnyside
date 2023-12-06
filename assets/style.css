@@ -128,4 +128,81 @@ header .banner__menu--contact {
   justify-content: space-around;
   margin-top: 398px;
   margin-left: 191px;
+}
+
+.client {
+  height: 777px;
+}
+.client__title {
+  text-align: center;
+  margin-top: 160px;
+  color: hsl(232, 10%, 55%);
+  line-height: 100px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-family: "Fraunces", arial, serif;
+  font-weight: 900;
+}
+.client__box {
+  width: 1110px;
+  height: 475px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.client__avis {
+  width: 370px;
+}
+.client__avis--img {
+  max-width: 72px;
+  max-height: 72px;
+  border-radius: 72px;
+}
+.client__avis--para {
+  margin: 35px;
+}
+.client__avis--para--1 {
+  margin: 36px;
+}
+.client__avis--signature {
+  font-family: "Fraunces", arial, serif;
+  font-weight: 900;
+}
+.client__avis--function {
+  font-size: 14px;
+  color: hsl(232, 10%, 55%);
+}
+
+footer {
+  height: 797px;
+}
+footer .image {
+  height: 447px;
+  width: 25%;
+  display: flex;
+}
+footer .fin {
+  height: 350px;
+  background-color: #90D4C6;
+  text-align: center;
+}
+footer .menu {
+  width: 700px;
+  margin-top: 25px;
+  margin-bottom: 125px;
+  margin-left: 376px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+footer .logo {
+  color: hsl(167, 40%, 24%);
+  margin: 35px;
+}
+footer .icon {
+  width: 164px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

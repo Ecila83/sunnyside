@@ -1,18 +1,23 @@
 //Primary
 $SoftRed: hsl(7, 99%, 70%);
 $learnMore: hsl(51, 100%, 49%);
-$DarkDesaturatedCyan : hsl(167, 40%, 24%); //(graphic design text)
+$logofooter : hsl(167, 40%, 24%); //(graphic design text)
 $DarkBlue : hsl(198, 62%, 26%); //(photography text)
 $ColorFooter: hsl(168, 34%, 41%);
 
 //Neutral
 $VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
 $VeryDarkGrayishBlue: hsl(213, 9%, 39%);
-$DarkGrayishBlue: hsl(232, 10%, 55%);
+$titleAvis: hsl(232, 10%, 55%);
 $GrayishBlue: hsl(210, 4%, 67%);
 $background: hsl(0, 0%, 100%);
 $bannerColor: $background;
 $title1: $background;
+
+//mobile
+$mobile: 375px;
+//mixin
+@import 'assets/_mixin.scss';
 
 * {
     margin: 0;
@@ -34,6 +39,9 @@ body {
     max-width: 1440px;
     width: 100%;
     background: $background;
+    @include max-width($mobile){
+        width: 375px;
+    }
 }
 
 header {
@@ -48,6 +56,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include max-width($mobile){
+        width: 100%;
 
     .banner {
         height: 56px;
@@ -114,6 +124,9 @@ header {
     height: 600px;
     display: flex;
     flex-direction: row;
+    @include max-width($mobile){
+        display:flex;
+        flex-direction: column;
 
     &--2 {
         flex-direction: row-reverse;
@@ -159,23 +172,26 @@ header {
 
 .container__Services {
     width: 50%;
+
     background: {
         image: url("./img/photos/image-graphic-design.jpg");
         size: 100%;
-       
+
 
     }
 
     &--2 {
         width: 50%;
+
         background: {
             image: url("./img/photos/image-photography.jpg");
             size: 100%;
-        
+
         }
-    
+
     }
-    &--texte{
+
+    &--texte {
         width: 339px;
         height: 143px;
         display: flex;
@@ -184,7 +200,110 @@ header {
         justify-content: space-around;
         margin-top: 398px;
         margin-left: 191px;
+
+
+    }
+}
+
+.client {
+    height: 777px;
+
+
+
+    &__title {
+        text-align: center;
+        margin-top: 160px;
+        color: $titleAvis;
+        line-height: 100px;
+        letter-spacing: 5px;
+
+        font: {
+            size: 20px;
+            family: "Fraunces", arial, serif;
+            weight: 900;
+        }
+    }
+
+    &__box {
+        width: 1110px;
+        height: 475px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__avis {
+        width: 370px;
+
+        &--img {
+            max-width: 72px;
+            max-height: 72px;
+            border-radius: 72px;
+        }
+
+        &--para {
+            margin: 35px;
+
+            &--1 {
+                margin: 36px;
+            }
+        }
+
+        &--signature {
+            font: {
+                family: "Fraunces", arial, serif;
+                weight: 900;
+
+            }
+        }
+
+        &--function {
+            font-size: 14px;
+            color: $titleAvis;
+        }
+
+    }
+}
+
+footer {
+    height: 797px;
+
+
+    .image {
+        height: 447px;
+        width: 25%;
+        display: flex;
+
+    }
+
+    .fin {
+        height: 350px;
+        background-color:  #90D4C6;
+        text-align: center;
+
+    }
+
+    .menu {
+        width: 700px;
+        margin-top:  25px;
+        margin-bottom: 125px;
+        margin-left: 376px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        ;
         
-    
+    }
+    .logo{
+        color: $logofooter;
+        margin: 35px;
+
+    }
+    .icon{
+        width: 164px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
     }
 }
