@@ -16,17 +16,17 @@ $title1: $background;
 
 //mobile
 $mobile: 375px;
+
 //mixin
-@import 'assets/_mixin.scss';
+@import 'mixin';
 
 * {
     margin: 0;
     padding: 0;
 }
 
-html {
-    display: flex;
-    justify-content: center;
+.spacer {
+    flex-grow: 1;
 }
 
 body {
@@ -36,12 +36,13 @@ body {
         weight: 600;
     }
 
-    max-width: 1440px;
-    width: 100%;
     background: $background;
-    @include max-width($mobile){
-        width: 375px;
-    }
+
+    margin: auto;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -49,261 +50,267 @@ header {
         image: url("./img/photos/image-header.jpg");
         size: cover;
         repeat: no-repeat;
+        position: center;
     }
 
-    width: 100%;
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include max-width($mobile){
-        width: 100%;
 
     .banner {
-        height: 56px;
-        width: 1352px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 3rem 0 3rem;
         color: hsl(0, 0%, 100%);
         font-weight: 600;
-        padding-top: 20px;
         display: flex;
-        justify-content: space-between;
 
         &__logo {
-            margin: 8.5px;
-            width: 170px;
+            margin: 2%;
             height: 33px;
+
         }
 
         &__menu {
+            @include max-width($mobile) {
+                display: none;
+            }
+
             list-style-type: none;
             display: flex;
             justify-content: space-between;
-
-
-            &--1 {
-                margin: 0 15px;
-                line-height: 50px;
-            }
+            align-items: center;
+            gap: 2rem;
 
             &--contact {
-
                 background-color: $bannerColor;
                 text-transform: uppercase;
                 color: $VeryDarkDesaturatedBlue;
-                border-radius: 28px;
-                width: 140px;
-                height: 56px;
-                text-align: center;
-                line-height: 50px;
-
-            }
-
-
-        }
-
-    }
-}
-
-.title1 {
-    font: {
-        size: 56px;
-        family: "Fraunces", arial, serif;
-        weight: 900;
-    }
-
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    margin: 100px 0;
-    color: $title1;
-    display: flex;
-    justify-content: center;
-
-}
-
-.container {
-    height: 600px;
-    display: flex;
-    flex-direction: row;
-    @include max-width($mobile){
-        display:flex;
-        flex-direction: column;
-
-    &--2 {
-        flex-direction: row-reverse;
-
-    }
-
-    &__explanation {
-        width: 50%;
-
-        &--texte {
-            width: 445px;
-            height: 285px;
-            margin-top: 158px;
-            margin-left: 165px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            &--2 {
-                margin-top: 158px;
-                margin-left: 110px;
-                justify-content: space-between;
+                border-radius: 1.5rem;
+                padding: 1rem 1.5rem;
             }
         }
 
-        &--title {
-            font: {
-                size: 40px;
-                family: "Fraunces", arial, serif;
-                weight: 900;
-            }
-        }
-
-        &--nav {
-            text-decoration: underline solid $learnMore 10px;
-            text-underline-offset: 0;
-        }
     }
 
-}
-
-
-
-.container__Services {
-    width: 50%;
-
-    background: {
-        image: url("./img/photos/image-graphic-design.jpg");
-        size: 100%;
-
-
-    }
-
-    &--2 {
-        width: 50%;
-
-        background: {
-            image: url("./img/photos/image-photography.jpg");
-            size: 100%;
-
-        }
-
-    }
-
-    &--texte {
-        width: 339px;
-        height: 143px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-around;
-        margin-top: 398px;
-        margin-left: 191px;
-
-
-    }
-}
-
-.client {
-    height: 777px;
-
-
-
-    &__title {
-        text-align: center;
-        margin-top: 160px;
-        color: $titleAvis;
-        line-height: 100px;
-        letter-spacing: 5px;
-
+    .title1 {
         font: {
-            size: 20px;
+            size: 56px;
             family: "Fraunces", arial, serif;
             weight: 900;
+
         }
-    }
-
-    &__box {
-        width: 1110px;
-        height: 475px;
-        margin: auto;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-    }
-
-    &__avis {
-        width: 370px;
-
-        &--img {
-            max-width: 72px;
-            max-height: 72px;
-            border-radius: 72px;
+        @include max-width($mobile) {
+            font-size: 40px;
+            text-align: center;
         }
-
-        &--para {
-            margin: 35px;
-
-            &--1 {
-                margin: 36px;
-            }
-        }
-
-        &--signature {
-            font: {
-                family: "Fraunces", arial, serif;
-                weight: 900;
-
-            }
-        }
-
-        &--function {
-            font-size: 14px;
-            color: $titleAvis;
-        }
-
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        margin: 100px 0;
+        color: $title1;
     }
 }
 
-footer {
-    height: 797px;
+main {
+    display: flex;
+    flex-direction: column;
 
+    .container {
+        height: 600px;
 
-    .image {
-        height: 447px;
-        width: 25%;
+        @include max-width($mobile) {
+            height: auto;
+        }
+
         display: flex;
 
+        flex-direction: row;
+
+        @include max-width($mobile) {
+            flex-direction: column;
+        }
+
+        &--2 {
+            flex-direction: row-reverse;
+
+            @include max-width($mobile) {
+                flex-direction: column;
+            }
+        }
+
+        &__explanation {
+            width: 50%;
+
+            @include max-width($mobile) {
+                width: 100%;
+            }
+
+            &--texte {
+                padding: 20%;
+
+                @include max-width($mobile) {
+                    padding: 1rem;
+                }
+
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            &--title {
+                font: {
+                    size: 40px;
+                    family: "Fraunces", arial, serif;
+                    weight: 900;
+                }
+            }
+
+            &--nav {
+                text-decoration: underline solid $learnMore 10px;
+                text-underline-offset: 0;
+            }
+        }
+    }
+
+    .container__Services {
+        width: 50%;
+        display: flex;
+
+        @include max-width($mobile) {
+            width: 100%;
+        }
+
+        &--1 {
+            background: {
+                image: url("./img/photos/image-graphic-design.jpg");
+                position: center;
+                size: cover;
+            }
+        }
+
+        &--2 {
+            background: {
+                image: url("./img/photos/image-photography.jpg");
+                position: center;
+                size: cover;
+            }
+        }
+
+        &--texte {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 2rem;
+
+            padding: 24rem 21% 0 21%;
+
+            @include max-width($mobile) {
+                padding: 12rem 1rem 1rem 1rem;
+            }
+        }
+    }
+
+    .client {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12rem;
+
+        &__title {
+            margin-bottom: 5rem;
+            color: $titleAvis;
+            letter-spacing: 5px;
+
+            font: {
+                size: 20px;
+                family: "Fraunces", arial, serif;
+                weight: 900;
+            }
+        }
+
+        &__box {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+
+            @include max-width($mobile) {
+                flex-direction: column;
+            }
+        }
+
+        &__avis {
+            &--img {
+                max-width: 72px;
+                max-height: 72px;
+                border-radius: 72px;
+            }
+
+            &--para {
+                margin: 35px;
+            }
+
+            &--signature {
+                font: {
+                    family: "Fraunces", arial, serif;
+                    weight: 900;
+
+                }
+            }
+
+            &--function {
+                font-size: 14px;
+                color: $titleAvis;
+            }
+        }
+    }
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    .images {
+        display: flex;
+
+        @include max-width($mobile) {
+            flex-wrap: wrap;
+        }
+
+        img {
+            width: 25%;
+
+            @include max-width($mobile) {
+                width: 50%;
+            }
+        }
     }
 
     .fin {
-        height: 350px;
-        background-color:  #90D4C6;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+        padding: 2rem;
+
+        background-color: #90D4C6;
     }
 
     .menu {
-        width: 700px;
-        margin-top:  25px;
-        margin-bottom: 125px;
-        margin-left: 376px;
+        gap: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
         list-style-type: none;
         display: flex;
-        justify-content: space-around;
-        ;
-        
     }
-    .logo{
-        color: $logofooter;
-        margin: 35px;
 
+    .logo {
+        color: $logofooter;
     }
-    .icon{
-        width: 164px;
-        margin: auto;
+
+    .icons {
         display: flex;
-        justify-content: space-between;
+        gap: 1.5rem;
     }
 }

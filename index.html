@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <!-- displays site properly based on user's device -->
     <link href=".\assets\style.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -21,6 +21,7 @@
     <header>
         <div class="banner">
             <img class="banner__logo" src="assets/img/logo.svg" alt="logo">
+            <div class="spacer"></div>
             <ul class="banner__menu">
                 <li class="banner__menu--1">About</LI>
                 <LI class="banner__menu--1">Services</LI>
@@ -33,7 +34,8 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container container--2">
+            <img class="container__explanation" src="assets/img/photos/image-transform.jpg" alt="egg">
             <section class="container__explanation">
                 <div class="container__explanation--texte">
                     <h2 class="container__explanation--title">Transform your brand</h2>
@@ -44,11 +46,11 @@
                     <nav class="container__explanation--nav">Learn more</nav>
                 </div>
             </section>
-            <img class="container__explanation" src="assets/img/photos/image-transform.jpg" alt="egg">
         </div>
-        <div class="container container--2">
+        <div class="container">
+            <img class="container__explanation" src="assets/img/photos/image-stand-out.jpg" alt="glass">
             <section class="container__explanation">
-                <div class="container__explanation--texte container__explanation--texte--2">
+                <div class="container__explanation--texte">
                     <h2 class="container__explanation--title">Stand out to the right audience</h2>
 
                     <p> Using a collaborative formula of designers, researchers, photographers, videographers, and
@@ -58,10 +60,9 @@
                     <nav class="container__explanation--nav">Learn more</nav>
                 </div>
             </section>
-            <img class="container__explanation" src="assets/img/photos/image-stand-out.jpg" alt="glass">
         </div>
         <div class="container">
-            <section class="container__Services">
+            <section class="container__Services container__Services--1">
                 <div class="container__Services--texte">
                     <h3 class="container__Services--title">Graphic design</h3>
 
@@ -70,7 +71,7 @@
                         potential clients’ attention.</p>
                 </div>
             </section>
-            <section class=" container__Services--2">
+            <section class="container__Services container__Services--2">
                 <div class="container__Services--texte">
                     <h3 class="container__service--title">Photography</h3>
                     <p>Increase your credibility by getting the most stunning, high-quality photos that improve your
@@ -79,13 +80,12 @@
                 </div>
             </section>
         </div>
-        <section class="Client">
-
+        <section class="client">
             <h4 class="client__title">Client testimonials</h4>
             <div class="client__box">
                 <div class="client__avis">
                     <img class="client__avis--img" src="assets/img/personage/image-emily.jpg" alt="Emily">
-                    <p class="client__avis--para--1">We put our trust in Sunnyside and they delivered, making sure our
+                    <p class="client__avis--para">We put our trust in Sunnyside and they delivered, making sure our
                         needs were met and deadlines
                         were
                         always</p>
@@ -114,7 +114,7 @@
         </section>
     </main>
     <footer>
-        <div class="image">
+        <div class="images">
             <img src="assets/img/photos/image-gallery-milkbottles.jpg" alt="milk">
             <img src="assets/img/photos/image-gallery-orange.jpg" alt="orange">
             <img src="assets/img/photos/image-gallery-cone.jpg" alt="cone">
@@ -127,7 +127,7 @@
                 <LI class="menu__2">Services</LI>
                 <LI class="menu__2">Projects</LI>
             </ul>
-            <div class="icon">
+            <div class="icons">
                 <img src="assets/img/icone/icon-facebook.svg" alt="icon-facebook">
                 <img src="assets/img/icone/icon-instagram.svg" alt="icon-instagram">
                 <img src="assets/img/icone/icon-twitter.svg" alt="icon-twitter">
@@ -135,6 +135,9 @@
             </div>
         </div>
     </footer>
+
+
+   
 </body>
 
 </html>
