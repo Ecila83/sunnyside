@@ -2,12 +2,12 @@
 $SoftRed: hsl(7, 99%, 70%);
 $learnMore: hsl(51, 100%, 49%);
 $logofooter : hsl(167, 40%, 24%); //(graphic design text)
-$DarkBlue : hsl(198, 62%, 26%); //(photography text)
+$textServices : hsl(198, 62%, 26%); //(photography text)
 $ColorFooter: hsl(168, 34%, 41%);
 
 //Neutral
-$VeryDarkDesaturatedBlue: hsl(212, 27%, 19%);
-$VeryDarkGrayishBlue: hsl(213, 9%, 39%);
+$titleService: hsl(212, 27%, 19%);
+$para: hsl(213, 9%, 39%);
 $titleAvis: hsl(232, 10%, 55%);
 $GrayishBlue: hsl(210, 4%, 67%);
 $background: hsl(0, 0%, 100%);
@@ -39,7 +39,7 @@ body {
     background: $background;
 
     margin: auto;
-    max-width: 1440px;
+    max-width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ header {
             &--contact {
                 background-color: $bannerColor;
                 text-transform: uppercase;
-                color: $VeryDarkDesaturatedBlue;
+                color: $textServices;
                 border-radius: 1.5rem;
                 padding: 1rem 1.5rem;
             }
@@ -101,13 +101,15 @@ header {
             weight: 900;
 
         }
+
         @include max-width($mobile) {
             font-size: 40px;
             text-align: center;
         }
+
         text-transform: uppercase;
         letter-spacing: 0.5rem;
-        margin: 100px 0;
+        margin: 10% 0;
         color: $title1;
     }
 }
@@ -150,7 +152,8 @@ main {
                 padding: 20%;
 
                 @include max-width($mobile) {
-                    padding: 1rem;
+                    padding: 20% 5%;
+                    text-align: center;                   
                 }
 
                 display: flex;
@@ -164,9 +167,24 @@ main {
                     family: "Fraunces", arial, serif;
                     weight: 900;
                 }
+                @include max-width($mobile) {
+                    font-size: 32px;
+                   
+                }
+            }
+            &--para {
+                line-height: 166.667%;
+                color: $titleAvis;
             }
 
             &--nav {
+                font:{
+                    size: 15px;
+                    family: "Fraunces", arial, serif;
+                    weight: 900;
+                }
+                line-height: 166.66%;
+                letter-spacing: 1px;
                 text-decoration: underline solid $learnMore 10px;
                 text-underline-offset: 0;
             }
@@ -201,13 +219,26 @@ main {
             display: flex;
             flex-direction: column;
             text-align: center;
-            gap: 2rem;
-
+            gap: 1.5rem;
             padding: 24rem 21% 0 21%;
+            color:$textServices;
+            line-height: 168.75%;
+
+            ;
 
             @include max-width($mobile) {
-                padding: 12rem 1rem 1rem 1rem;
+                padding: 90% 3% 10% 3%;
             }
+
+           
+        }
+        &--title {
+            font: {
+                size: 28px;
+                family: "Fraunces", arial, serif;
+                weight: 900;
+            }
+            color: $titleService;
         }
     }
 
@@ -215,10 +246,11 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 12rem;
+        padding: 10%;
+
 
         &__title {
-            margin-bottom: 5rem;
+            margin-bottom: 6%;
             color: $titleAvis;
             letter-spacing: 5px;
 
@@ -227,15 +259,22 @@ main {
                 family: "Fraunces", arial, serif;
                 weight: 900;
             }
+
+            @include max-width($mobile) {
+                font-size: 16px;
+                padding-bottom: 15%;
+            }
         }
 
         &__box {
             text-align: center;
             display: flex;
             flex-direction: row;
+            flex-grow: 1;
 
             @include max-width($mobile) {
                 flex-direction: column;
+                gap: 4rem;
             }
         }
 
@@ -244,23 +283,32 @@ main {
                 max-width: 72px;
                 max-height: 72px;
                 border-radius: 72px;
+                margin: 5px;
             }
 
             &--para {
-                margin: 35px;
+                padding: 8%;
+                line-height: 177.78%;
+                color: $para;
+
+                @include max-width($mobile) {
+                    padding: 3% 0.5% 3% 0.5%;
+
+                }
             }
 
             &--signature {
                 font: {
                     family: "Fraunces", arial, serif;
                     weight: 900;
-
                 }
+
             }
 
             &--function {
                 font-size: 14px;
                 color: $titleAvis;
+                padding: 1.5%;
             }
         }
     }
@@ -287,30 +335,32 @@ footer {
         }
     }
 
-    .fin {
+    .end {
         display: flex;
         flex-direction: column;
         align-items: center;
-
         padding: 2rem;
-
         background-color: #90D4C6;
-    }
 
-    .menu {
-        gap: 3rem;
-        margin-top: 3rem;
-        margin-bottom: 5rem;
-        list-style-type: none;
-        display: flex;
-    }
+        &__logo {
+            color: $logofooter;
+        }
 
-    .logo {
-        color: $logofooter;
-    }
+        &__menu {
 
-    .icons {
-        display: flex;
-        gap: 1.5rem;
+            margin: {
+                top: 3rem;
+                bottom: 5rem;
+            }
+
+            list-style-type: none;
+            display: flex;
+            gap: 3rem;
+        }
+
+        & __icons {
+            display: flex;
+            gap: 1.5rem;
+        }
     }
 }

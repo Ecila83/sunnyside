@@ -13,7 +13,7 @@ body {
   font-weight: 600;
   background: hsl(0, 0%, 100%);
   margin: auto;
-  max-width: 1440px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +55,7 @@ header .banner__menu {
 header .banner__menu--contact {
   background-color: hsl(0, 0%, 100%);
   text-transform: uppercase;
-  color: hsl(212, 27%, 19%);
+  color: hsl(198, 62%, 26%);
   border-radius: 1.5rem;
   padding: 1rem 1.5rem;
 }
@@ -65,7 +65,7 @@ header .title1 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  margin: 100px 0;
+  margin: 10% 0;
   color: hsl(0, 0%, 100%);
 }
 @media (max-width: 375px) {
@@ -118,7 +118,8 @@ main .container__explanation--texte {
 }
 @media (max-width: 375px) {
   main .container__explanation--texte {
-    padding: 1rem;
+    padding: 20% 5%;
+    text-align: center;
   }
 }
 main .container__explanation--title {
@@ -126,7 +127,21 @@ main .container__explanation--title {
   font-family: "Fraunces", arial, serif;
   font-weight: 900;
 }
+@media (max-width: 375px) {
+  main .container__explanation--title {
+    font-size: 32px;
+  }
+}
+main .container__explanation--para {
+  line-height: 166.667%;
+  color: hsl(232, 10%, 55%);
+}
 main .container__explanation--nav {
+  font-size: 15px;
+  font-family: "Fraunces", arial, serif;
+  font-weight: 900;
+  line-height: 166.66%;
+  letter-spacing: 1px;
   -webkit-text-decoration: underline solid hsl(51, 100%, 49%) 10px;
           text-decoration: underline solid hsl(51, 100%, 49%) 10px;
   text-underline-offset: 0;
@@ -154,45 +169,69 @@ main .container__Services--texte {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 24rem 21% 0 21%;
+  color: hsl(198, 62%, 26%);
+  line-height: 168.75%;
 }
 @media (max-width: 375px) {
   main .container__Services--texte {
-    padding: 12rem 1rem 1rem 1rem;
+    padding: 90% 3% 10% 3%;
   }
+}
+main .container__Services--title {
+  font-size: 28px;
+  font-family: "Fraunces", arial, serif;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
 }
 main .client {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12rem;
+  padding: 10%;
 }
 main .client__title {
-  margin-bottom: 5rem;
+  margin-bottom: 6%;
   color: hsl(232, 10%, 55%);
   letter-spacing: 5px;
   font-size: 20px;
   font-family: "Fraunces", arial, serif;
   font-weight: 900;
 }
+@media (max-width: 375px) {
+  main .client__title {
+    font-size: 16px;
+    padding-bottom: 15%;
+  }
+}
 main .client__box {
   text-align: center;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 @media (max-width: 375px) {
   main .client__box {
     flex-direction: column;
+    gap: 4rem;
   }
 }
 main .client__avis--img {
   max-width: 72px;
   max-height: 72px;
   border-radius: 72px;
+  margin: 5px;
 }
 main .client__avis--para {
-  margin: 35px;
+  padding: 8%;
+  line-height: 177.78%;
+  color: hsl(213, 9%, 39%);
+}
+@media (max-width: 375px) {
+  main .client__avis--para {
+    padding: 3% 0.5% 3% 0.5%;
+  }
 }
 main .client__avis--signature {
   font-family: "Fraunces", arial, serif;
@@ -201,6 +240,7 @@ main .client__avis--signature {
 main .client__avis--function {
   font-size: 14px;
   color: hsl(232, 10%, 55%);
+  padding: 1.5%;
 }
 
 footer {
@@ -223,24 +263,24 @@ footer .images img {
     width: 50%;
   }
 }
-footer .fin {
+footer .end {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   background-color: #90D4C6;
 }
-footer .menu {
-  gap: 3rem;
+footer .end__logo {
+  color: hsl(167, 40%, 24%);
+}
+footer .end__menu {
   margin-top: 3rem;
   margin-bottom: 5rem;
   list-style-type: none;
   display: flex;
+  gap: 3rem;
 }
-footer .logo {
-  color: hsl(167, 40%, 24%);
-}
-footer .icons {
+footer .end __icons {
   display: flex;
   gap: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
